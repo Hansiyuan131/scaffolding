@@ -28,3 +28,6 @@ spring:
         cluster-name: Cluster-A # 创建不同的集群
         group: myGroup # [注意]两个服务如果存在上下游调用关系，必须配置相同的group才能发起访问
         register-enabled: true  # 向注册中心注册服务，默认为true,如果只消费服务，不作为服务提供方，倒是可以设置成false，减少开销
+    loadbalancer:
+      ribbon:
+        enabled: false

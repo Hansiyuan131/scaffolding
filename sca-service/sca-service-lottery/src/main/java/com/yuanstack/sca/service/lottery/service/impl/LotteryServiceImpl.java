@@ -1,5 +1,6 @@
 package com.yuanstack.sca.service.lottery.service.impl;
 
+import com.yuanstack.sca.service.lottery.feign.UserService;
 import com.yuanstack.sca.service.lottery.service.LotteryService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -17,11 +18,15 @@ public class LotteryServiceImpl implements LotteryService {
     @Resource
     private WebClient.Builder webClientBuilder;
 
+    @Resource
+    private UserService userService;
+
     @Override
     public String extractPrize(Long userId) {
-        String userInfo = getUserInfo(userId);
+        String userInfo = userService.getUserInfo(userId);
         return userInfo + " 参与了抽奖";
     }
+
 
     private String getUserInfo(Long userId) {
         return webClientBuilder.build()
