@@ -13,7 +13,7 @@ spring:
         username: nacos
         password: nacos
         server-addr: 127.0.0.1:8848 # Nacos的服务注册地址，可以配置多个，逗号分隔
-        namespace: sca-dev # 命名空间ID，Nacos通过不同的命名空间来区分不同的环境，进行数据隔离，
+        namespace: ce3e435a-4698-42fc-bdbe-c2fd7ed59853 # 命名空间ID，Nacos通过不同的命名空间来区分不同的环境，进行数据隔离，
         service: sca-service-lottery  # 服务注册到Nacos上的名称，一般不用配置
         # nacos客户端向服务端发送心跳的时间间隔，时间单位其实是ms
         heart-beat-interval: 5000
