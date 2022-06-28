@@ -31,3 +31,16 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
+feign:
+  client:
+    config:
+      # 全局超时配置
+      default:
+        # 网络连接阶段1秒超时
+        connectTimeout: 1000
+        # 服务请求响应阶段5秒超时
+        readTimeout: 5000
+      # 针对某个特定服务的超时配置
+      sca-service-system:
+        connectTimeout: 1000
+        readTimeout: 2000
