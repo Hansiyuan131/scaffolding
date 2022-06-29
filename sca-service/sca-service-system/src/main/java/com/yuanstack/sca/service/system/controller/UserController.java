@@ -23,9 +23,9 @@ public class UserController {
 
     @GetMapping("/user/{id}")
     @ApiOperation("根据用户Id获取用户信息")
-//    @ApiImplicitParams({
-//            @ApiImplicitParam(name = "id", value = "用户id", dataTypeClass = Long.class, dataType = "query"),
-//    })
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "id", value = "用户id", dataTypeClass = Long.class, dataType = "query"),
+    })
     public String getUserInfo(@PathVariable Long id) {
         return "Hello " + id;
     }

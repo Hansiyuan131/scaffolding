@@ -33,6 +33,10 @@ public class LogUtils {
         log(logger, LogType.INFO, modelEnum.getCode(), bizOperation, bizCoreParam, obj);
     }
 
+    public static void info(Logger logger, ModelEnum modelEnum, String bizOperation) {
+        log(logger, LogType.INFO, modelEnum.getCode(), bizOperation, null, null);
+    }
+
     public static void warn(Logger logger, ModelEnum modelEnum, String bizOperation, Object bizCoreParam, Object... obj) {
         log(logger, LogType.WARN, modelEnum.getCode(), bizOperation, bizCoreParam, obj);
     }

@@ -11,10 +11,14 @@ import lombok.Getter;
 public enum ModelEnum {
 
     // 业务模块
-    BIZ_USER("user", "用户模块"),
+    BIZ_USER("User", "用户模块"),
 
     // 组件
-    ASSEMBLY_ROCKETMQ("rocketMQ", "rocketMQ模块");
+    ASSEMBLY_ROCKETMQ("RocketMQ", "rocketMQ模块"),
+
+    // 工具类
+    COMMON_UTILS("Utils", "工具类"),
+    COMMON_MONITOR("Monitor", "监控");
 
     /**
      * 编码
