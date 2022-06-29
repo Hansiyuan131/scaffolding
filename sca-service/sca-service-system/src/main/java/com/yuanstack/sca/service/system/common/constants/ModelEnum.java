@@ -18,7 +18,10 @@ public enum ModelEnum {
 
     // 工具类
     COMMON_UTILS("Utils", "工具类"),
-    COMMON_MONITOR("Monitor", "监控");
+    COMMON_MONITOR("Monitor", "监控"),
+    COMMON_DESENSITIZE("Desensitize", "脱敏处理"),
+    COMMON_THREAD("Thread", "多线程异步处理"),
+    COMMON_OSS("OSS", "存储");
 
     /**
      * 编码
