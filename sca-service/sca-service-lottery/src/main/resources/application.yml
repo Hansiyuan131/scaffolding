@@ -31,6 +31,12 @@ spring:
     loadbalancer:
       ribbon:
         enabled: false
+    sentinel:
+      transport:
+        # sentinel api端口，默认8719
+        port: 8719
+        # dashboard地址
+        dashboard: localhost:8080
 feign:
   client:
     config:
