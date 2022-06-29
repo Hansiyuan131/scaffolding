@@ -1,15 +1,14 @@
-package com.yuanstack.sca.service.system.common.constants;
+package com.yuanstack.sca.service.system.assembly.third.km;
 
-import com.yuanstack.sca.service.system.common.exception.CustomException;
 import lombok.Getter;
 
 /**
- * @description: 自定义异常类型
+ * @description: KmErrorEnum
  * @author: hansiyuan
- * @date: 2022/6/28 3:28 PM
+ * @date: 2022/6/29 5:04 PM
  */
 @Getter
-public enum CustomExceptionType {
+public enum KmErrorEnum {
     USER_INPUT_ERROR("400", "您输入的数据错误或您没有权限访问资源！"),
     SYSTEM_ERROR("500", "系统出现异常，请您稍后再试或联系管理员！"),
     OTHER_ERROR("999", "系统出现未知异常，请联系管理员！"),
@@ -25,8 +24,12 @@ public enum CustomExceptionType {
      */
     private final String code;
 
-    CustomExceptionType(String code, String desc) {
+    KmErrorEnum(String code, String desc) {
         this.code = code;
         this.desc = desc;
+    }
+
+    public static KmErrorEnum getKmErrorEnumByCode(String toString) {
+        return E_SYS_HTTP_429;
     }
 }

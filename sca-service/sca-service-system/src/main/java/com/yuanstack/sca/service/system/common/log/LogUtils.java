@@ -45,6 +45,10 @@ public class LogUtils {
         log(logger, LogType.ERROR, modelEnum.getCode(), bizOperation, bizCoreParam, obj);
     }
 
+    public static void error(Logger logger, ModelEnum modelEnum, String bizOperation) {
+        log(logger, LogType.ERROR, modelEnum.getCode(), bizOperation, null, null);
+    }
+
     private static void log(Logger logger, LogType logType, String modelEnum, String bizOperation, Object bizCoreParam, Object... obj) {
         try {
             Throwable e = null;

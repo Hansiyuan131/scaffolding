@@ -76,6 +76,33 @@ public class AjaxResponse<T> implements Serializable {
                 .build();
     }
 
+    public static <T> AjaxResponse<T> error(T data, CustomExceptionType customExceptionType, String errorMessage) {
+        AjaxResponse<T> resultBean = new AjaxResponse<>();
+        resultBean.setResult(FAIL);
+        resultBean.setCode(customExceptionType.getCode());
+        resultBean.setMessage(errorMessage);
+        resultBean.setData(data);
+        return resultBean;
+    }
+
+    public static <T> AjaxResponse<T> error(T data, CustomExceptionType customExceptionType) {
+        AjaxResponse<T> resultBean = new AjaxResponse<>();
+        resultBean.setResult(FAIL);
+        resultBean.setCode(customExceptionType.getCode());
+        resultBean.setMessage(customExceptionType.getDesc());
+        resultBean.setData(data);
+        return resultBean;
+    }
+
+    public static <T> AjaxResponse<T> error(T data, String errorMessage) {
+        AjaxResponse<T> resultBean = new AjaxResponse<>();
+        resultBean.setResult(FAIL);
+        resultBean.setCode(String.valueOf(999));
+        resultBean.setMessage(errorMessage);
+        resultBean.setData(data);
+        return resultBean;
+    }
+
     /**
      * 请求成功地响应，不带查询数据（用于删除、修改、新增接口）
      *

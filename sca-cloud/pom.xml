@@ -88,6 +88,16 @@
                 <artifactId>commons-lang3</artifactId>
                 <version>3.9</version>
             </dependency>
+            <dependency>
+                <groupId>com.aliyun.openservices</groupId>
+                <artifactId>ons-client</artifactId>
+                <version>1.8.4.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>com.aliyun</groupId>
+                <artifactId>aliyun-java-sdk-ons</artifactId>
+                <version>3.1.5</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
