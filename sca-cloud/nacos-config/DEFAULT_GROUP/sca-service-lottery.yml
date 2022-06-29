@@ -1,0 +1,18 @@
+disableAwardRequest: true
+
+spring:
+  datasource:
+    # mysql数据源
+    url: jdbc:mysql://127.0.0.1:3306/sca-lottey?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: mysql123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 连接池
+    hikari:
+        pool-name: LotteryHikari
+        connection-timeout: 5000
+        idle-timeout: 30000
+        maximum-pool-size: 10
+        minimum-idle: 5
+        max-lifetime: 6000
+        auto-commit: true
